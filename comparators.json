@@ -1,6 +1,6 @@
 {
   "brokerages": {
-    "headers": [
+    "headers": [[
       {
         "valueName": "imageUrl",
         "label": "BROKERAGES"
@@ -23,13 +23,15 @@
       {
         "valueName": "accountMaintenance",
         "label": "ACCOUNT MAINTENANCE",
-        "description": "Administration fee to maintain an account. This is usually waived when certain asset levels or number of commissionable trades are met."
+        "description": "Administration fee to maintain an account. This is usually waived when certain asset levels or number of commissionable trades are met.",
+        "rowNumber": 0
       },
       {
         "valueName": "promotionalOffers",
         "label": "PROMOTIONAL OFFERS",
         "description": "These offers, often available for a limited time, allow Hardbacon’s users to keep more bacon in their pockets. Every time a user redeem one of these offers using our links, we get a commission, which allow us to continue to work for you. "
-      },
+      }
+    ], [
       {
         "valueName": "roboAdvisor",
         "label": "ROBO-ADVISOR",
@@ -64,7 +66,8 @@
         "valueName": "usdOnly",
         "label": "USD ONLY",
         "description": "USD denominated brokerage accounts allow you to trade in U.S. markets without converting to CAD. No bothersome exchange rate but requires at least one account per currency."
-      },
+      }
+    ], [
       {
         "valueName": "dualCurrencyCadUsd",
         "label": "DUAL-CURRENCY (CAD/USD)",
@@ -83,7 +86,8 @@
       {
         "valueName": "level12Data",
         "label": "LEVEL 1 & 2 DATA",
-        "description": "Real-time data can give experienced traders important insight regarding market depth. Level 1 users get real-time quotes while level 2 offers details on all pending orders (bid/ask). Some brokers offer "
+        "description": "Real-time data can give experienced traders important insight regarding market depth. Level 1 users get real-time quotes while level 2 offers details on all pending orders (bid/ask). Some brokers offer ",
+        "rowNumber": 2
       },
       {
         "valueName": "marginAccountRate",
@@ -95,7 +99,7 @@
         "label": "MOBILE",
         "description": "Mobile application for iOS or Android. Website built for mobile on which you can place trades."
       }
-    ],
+    ]],
     "values": [
       {
         "id": "virtual_broker",
