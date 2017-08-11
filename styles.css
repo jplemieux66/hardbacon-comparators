@@ -1,0 +1,231 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.comparator-header {
+	padding: 50px 20px
+}
+
+@media (min-width: 992px) {
+	.comparator-header {
+		padding: 6vw 20vw
+	}
+}
+
+.comparator {
+	background-color: #00CCCC;
+	padding: 0 5%;
+	margin-bottom: 80px !important
+}
+
+.comparator .tooltip-category {
+  background: none;
+  margin: 0 auto;
+	border: none;
+	outline: none;
+	color: #00cccc
+}
+
+@media (min-width: 992px) {
+	.comparator .tooltip-category.mobile {
+		display: none
+	}
+}
+
+.comparator .tooltip-category .glyphicon {
+	font-size: 16px
+}
+
+.comparator .comparator-information {
+	font-family: 'FuturaLTPro-Book', sans-serif
+}
+
+.comparator .comparator-name {
+	font-family: 'FuturaLTPro-Book', sans-serif;
+	font-size: 56px;
+	font-weight: 100
+}
+
+.comparator .brokerage {
+	cursor: pointer
+}
+
+.comparator .brokerage.selected {
+	background: #dedede
+}
+
+.comparator .robo {
+	cursor: pointer
+}
+
+.comparator .robo.selected {
+	background: #dedede;
+	border-radius: 0
+}
+
+.comparator .tab-control {
+	background-color: #ececec;
+	margin-top: 50px;
+	border-radius: 25px 25px 0 0;
+	color: #fff;
+	padding-bottom: 15px;
+	padding-top: 15px
+}
+
+.comparator h3 {
+	margin: 20px 0;
+	text-transform: uppercase
+}
+
+.comparator .comparator-table.brokerage-table th,
+.comparator .comparator-table.brokerage-table td {
+	text-align: center;
+	width: 100%
+}
+
+@media (min-width: 992px) {
+	.comparator .comparator-table.brokerage-table th,
+	.comparator .comparator-table.brokerage-table td {
+		width: calc(100% / 7);
+		display: flex;
+		flex-direction: column;
+		display: -webkit-flex;
+		-webkit-flex-direction: column
+	}
+}
+
+.comparator .comparator-table {
+	background-color: #fff
+}
+
+.comparator .comparator-table thead th {
+	padding-top: 30px
+}
+
+.comparator .comparator-table .btn-cmpt-details {
+	border: none
+}
+
+.comparator .comparator-table .brokerrow p,
+.comparator .comparator-table .roborow p {
+	text-transform: uppercase;
+	font-size: 14px
+}
+
+.comparator .comparator-table .glyphicon-plus-sign,
+.comparator .comparator-table .glyphicon-minus-sign {
+	font-size: 2em
+}
+
+.comparator .comparator-table img {
+	width: 200px;
+	padding: 0
+}
+
+@media (min-width: 992px) {
+	.comparator .comparator-table img {
+		width: 180px;
+		padding: 0 20px
+	}
+}
+
+.comparator .comparator-table tbody tr.collapse {
+	border-bottom: 10px solid #efefef !important
+}
+
+.comparator .comparator-table tbody #mainheadercomparator {
+	border-bottom: none !important
+}
+
+.comparator .comparator-table td {
+	border-bottom: 1px solid #dcdcdc;
+	padding: 20px 0
+}
+
+.comparator .comparator-table td p {
+	margin: 0;
+	text-align: center !important;
+	font-size: 12px;
+	padding: 0
+}
+
+.comparator .comparator-table tr {
+	display: inline-flex;
+	flex-direction: column;
+	display: -webkit-inline-flex;
+	-webkit-flex-direction: column;
+	width: 100%;
+	text-align: center
+}
+
+@media (min-width: 992px) {
+	.comparator .comparator-table tr {
+		flex-direction: row;
+		-webkit-flex-direction: row
+	}
+}
+
+.comparator .comparator-table th {
+	text-transform: uppercase;
+	background: #f8f8f8;
+	vertical-align: top;
+	text-align: center;
+	font-weight: 300;
+	font-size: 14px;
+	padding: 5px 0
+}
+
+.comparator .comparator-table tbody td {
+	justify-content: center
+}
+
+.comparator .comparator-table tbody td:before {
+	content: attr(data-label);
+	font-weight: 900;
+	color: #000;
+	text-transform: uppercase
+}
+
+@media (min-width: 992px) {
+	.comparator .comparator-table tbody td:before {
+		content: ''
+	}
+}
+
+.comparator .comparator-table tbody td:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center
+}
+
+.comparator .comparator-table th,
+.comparator .comparator-table td {
+	text-align: center;
+	width: 100%
+}
+
+@media (min-width: 992px) {
+	.comparator .comparator-table th,
+	.comparator .comparator-table td {
+		width: calc(100% / 6);
+		display: flex;
+		flex-direction: column;
+		display: -webkit-flex;
+		-webkit-flex-direction: column
+	}
+}
+
+.comparator .comparator-table .collapse {
+	transition: all .6s;
+	display: none
+}
+
+.comparator .comparator-table .collapse.in {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	width: 100%;
+	text-align: center
+}
