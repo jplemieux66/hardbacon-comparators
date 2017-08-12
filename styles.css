@@ -13,7 +13,6 @@ body {
 }
 
 .comparator {
-	background-color: #00CCCC;
 	padding: 0 5%;
 	margin-bottom: 80px !important
 }
@@ -228,4 +227,105 @@ body {
 	display: -webkit-inline-flex;
 	width: 100%;
 	text-align: center
+}
+
+/* EXTRA.CSS */
+@media (max-width: 988px){
+   .comparator .comparator-table thead{
+     display:none;
+   }
+   td[c-label]:before {
+	content: attr(data-label); /* no quotes around attribute name! */
+	font-weight: bold;
+        font-size: 18px;
+        padding-bottom: 5px;
+   }
+   .comparator .comparator-table td
+   {
+     height:auto;
+   }
+   .comparator .tooltip-category
+   {
+     padding:10px;
+   }
+   .comparator .comparator-table td .btn-cmpt-details
+   {
+     margin: 25px;
+   }
+
+}
+
+.comparator {
+    margin: 0;
+    background-color: #FFFFFF;
+}
+.comparator .comparator-border {
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* CUSTOM CSS */
+
+.form-control {
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+  -moz-box-shadow:    none;
+  box-shadow:         none;
+}
+
+.btn {
+	border: none;
+	background-color: #1ac1c1;
+}
+
+.btn:hover {
+	border: none;
+	background-color: #00CCCC;
+}
+
+.btn:focus {
+	border: none;
+	background-color: #1ac1c1;
+}
+
+.btn:active:focus {
+	border: none;
+	background-color: #1ac1c1;
+}
+
+.btn-info {
+	max-width: 150px;
+	white-space:normal;
+}
+
+#promotional-offer-modal .modal-body {
+	text-align: center;
+}
+
+#promotional-offer-modal .modal-header h4 {
+	font-size: 26px;
+	text-align: center;
+}
+
+#promotional-offer-modal .modal-header .close {
+	font-size: 40px;
+}
+
+.promotional-offer-text {
+	padding: 20px 0;
+}
+
+.promotional-offer-text-input {
+	margin: 0 auto 20px auto;
+	display: block;
+	max-width: 230px;
+	border: none;
+	border-bottom: 3px solid #00cccc;
+	padding-bottom: 7px;
+	font-size: 22px;
+}
+
+.promotional-offer-text-input:focus {
+	border-color: #D3D3D3;
+	border-bottom: 3px solid #00cccc;
 }

@@ -3,7 +3,8 @@
     "headers": [[
       {
         "valueName": "imageUrl",
-        "label": "BROKERAGES"
+        "label": "BROKERAGES",
+        "showLabelOnMobile": false
       },
       {
         "valueName": "minimumDeposit",
@@ -29,7 +30,8 @@
       {
         "valueName": "promotionalOffers",
         "label": "PROMOTIONAL OFFERS",
-        "description": "These offers, often available for a limited time, allow Hardbacon’s users to keep more bacon in their pockets. Every time a user redeem one of these offers using our links, we get a commission, which allow us to continue to work for you. "
+        "description": "These offers, often available for a limited time, allow Hardbacon’s users to keep more bacon in their pockets. Every time a user redeem one of these offers using our links, we get a commission, which allow us to continue to work for you. ",
+        "showLabelOnMobile": false
       }
     ], [
       {
@@ -100,10 +102,10 @@
         "description": "Mobile application for iOS or Android. Website built for mobile on which you can place trades."
       }
     ]],
-    "values": [
+    "entries": [
       {
-        "id": "virtual_broker",
-        "name": "Virtual Broker",
+        "id": "virtual_brokers",
+        "name": "Virtual Brokers",
         "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/virtual_broker_logo.png",
         "minimumDeposit": "$0",
         "commissionEquity": "$9.99",
