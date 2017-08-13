@@ -156,6 +156,761 @@
           "P + 2.5% > $100 000"
         ],
         "mobile": "iOS/Android Website"
+      },
+      {
+        "id": "bmo",
+        "name": "BMO InvestorLine",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/bmo_logo.png",
+        "minimumDeposit": "$5000",
+        "commissionEquity": "$9.95",
+        "etfOffers": "No",
+        "accountMaintenance": "25$/qtr",
+        "promotionalOffers": "Invest $200,000 in a new account and get $1,200 cash back and 60-day access to exclusive program benefits",
+        "roboAdvisor": "BMO Smartfolio",
+        "optionsCommissions": "$9.95 + $1.25/contract",
+        "resources": "Morningstar",
+        "reducedCommissionsEquity": "No",
+        "internationalMarkets": "No",
+        "usdOnly": "Unregistered",
+        "dualCurrencyCadUsd": "Registered",
+        "accountMaintenanceRebateCriteria": [
+          "$10,000+ assets",
+          "Have any registered account",
+          "2+ trades in last 6 months"
+        ],
+        "optionReducedCommissions": "No",
+        "level12Data": "Level 2 - Free with $250,000+ assets or 30+ trades/qtr",
+        "marginAccountRate": "P + 1%",
+        "mobile": [
+          "iOS/Android",
+          "Website"
+        ]
+      },
+      {
+        "id": "jitneytrade",
+        "name": "Jitneytrade",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/jitneytrade.png",
+        "minimumDeposit": "$25,000",
+        "commissionEquity": "$9.99",
+        "etfOffers": "No",
+        "accountMaintenance": "$20.00 / month",
+        "promotionalOffers": "Open a new account and get the Realtick platform for $285 US per month instead of $435 US",
+        "roboAdvisor": "N/A",
+        "optionsCommissions": "$1.50/contract (min. $15)",
+        "resources": "N/A",
+        "reducedCommissionsEquity": "Reduced commissions for larger trading volume",
+        "internationalMarkets": "N/A",
+        "usdOnly": "Yes",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": "1+ trade per month",
+        "optionReducedCommissions": "",
+        "level12Data": "Level 1 (US and Canada) - $20 per month",
+        "marginAccountRate": "P + 1%",
+        "mobile": "With selected trading platforms"
+      },
+      {
+        "id": "td_direct",
+        "name": "TD Direct Investing",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/TD_direct_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$9.99",
+        "etfOffers": "No",
+        "accountMaintenance": "25$/qtr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$9.99 + $1.25/contract",
+        "resources": "Morningstar",
+        "reducedCommissionsEquity": "$7 (150+ trades/qtr)",
+        "internationalMarkets": "$150 and above",
+        "usdOnly": "No",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$15,000+ assets",
+          "New account (6 months free)",
+          "3+ trades in last 3 months",
+          "$100+/month pre-authorized contributions"
+        ],
+        "optionReducedCommissions": "$7 + $1.25/contract (150+ trades/qtr)",
+        "level12Data": "Level 1 & 2 - $19/month",
+        "marginAccountRate": [
+          "4.25%",
+          "$500,000+ assets:",
+          "4% under $25,000",
+          "3.75% $25,000 - $99,000",
+          "3% $100,000+"
+        ],
+        "mobile": "iOS/Android Website"
+      },
+      {
+        "id": "laurentian",
+        "name": "Laurentian Bank Discount Brokerage",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/laurentian_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$9.95",
+        "etfOffers": "No",
+        "accountMaintenance": [
+          "Unregistered: 25$/qtr",
+          "TFSA: 50$/yr",
+          "Registered: 75$/yr"
+        ],
+        "roboAdvisor": "No",
+        "optionsCommissions": "$9.95",
+        "resources": "No",
+        "reducedCommissionsEquity": "No",
+        "internationalMarkets": "No",
+        "usdOnly": "Unregistered",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": "Overly complex pricing structure * See website *",
+        "optionReducedCommissions": "No",
+        "level12Data": "No",
+        "marginAccountRate": [
+          "P + 1% under $100,000",
+          "P $100,000+"
+        ],
+        "mobile": "Website"
+      },
+      {
+        "id": "shareowner",
+        "name": "ShareOwner",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/shareowner_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$0.01/share ($min 19.95)",
+        "etfOffers": "Over 50 ETFs",
+        "accountMaintenance": [
+          "Unregistered: Free",
+          "TFSA: 50$/yr",
+          "Registered: 75$/yr"
+        ],
+        "roboAdvisor": "No",
+        "optionsCommissions": "Not offered",
+        "resources": "Guided portfolios",
+        "reducedCommissionsEquity": "Purchase a stock portfolio at a scheduled time for a flat fee of $40",
+        "internationalMarkets": "No",
+        "usdOnly": "No",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": "N/A",
+        "optionReducedCommissions": "Not offered",
+        "level12Data": "Not offered",
+        "marginAccountRate": "No margin accounts",
+        "mobile": "No"
+      },
+      {
+        "id": "scotia_itrade",
+        "name": "Scotia iTrade",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/scotia_itrade_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$24.99 (up to 1,000 shares, +$0.03/share thereafter)",
+        "etfOffers": "50 commission-free ETFs",
+        "accountMaintenance": "$25/qtr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$24.99 + $1.75/contract",
+        "resources": "No",
+        "reducedCommissionsEquity": "$9.99 (30+ trades/qtr or $50,000+ assets)",
+        "internationalMarkets": "250$ and above",
+        "usdOnly": "Registered (+30$/qtr)",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$10,000+ assets",
+          "New account (6 months free) 1+ trade(s) in last 3 months"
+        ],
+        "optionReducedCommissions": [
+          "9.99$ +1.25$/contract (30+ trades/qtr or >50K)",
+          "4.99$ +1.25$/contract (150+ trades/qtr)"
+        ],
+        "level12Data": [
+          "Level 1&2 - $79.95/month ($69.95/month $50,000+ assets",
+          "$39.95/month with 10-29 trades",
+          "Free with 40+ trades/month or $250,000+ assets)"
+        ],
+        "marginAccountRate": [
+          "P + 1.65% under $25,000",
+          "P + 1.6% $25,000 - $99,999",
+          "P + 1.55% $100,000+",
+          "",
+          "$250,000+ assets or 30+ trades/qtr:",
+          "P + 1.5% under $25,000",
+          "P + 1.45% $25,000 - $99,999",
+          "P + 1.25% $100,000+",
+          "",
+          "$1,000,000 or 150+ trades/qtr:",
+          "P + 1.25% under $100,000",
+          "P + 1.2% $100,000+"
+        ],
+        "mobile": "iOS/Android Website"
+      },
+      {
+        "id": "interactive_brokers",
+        "name": "Interactive Brokers",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/interactive_broker_logo.png",
+        "minimumDeposit": [
+          "$5,000 (Registered)",
+          "$10,000 (Unregistered)"
+        ],
+        "commissionEquity": [
+          "Canada: $0.01/share*",
+          "U.S.: $0.005/share*",
+          "*min. $1 - max. 0.5% of trade value"
+        ],
+        "etfOffers": "26 commission-free ETFs",
+        "accountMaintenance": [
+          "$10/month ($2,000+ assets)",
+          "$20/month (Under $2,000 assets)"
+        ],
+        "roboAdvisor": "No",
+        "optionsCommissions": "$1.25/contract (min $1.50)",
+        "resources": "No",
+        "reducedCommissionsEquity": "Volume discounts starting at 300,000+ shares traded/month",
+        "internationalMarkets": "Over 50 global markets with variable commission",
+        "usdOnly": "Registered/Unregistered",
+        "dualCurrencyCadUsd": "Registered",
+        "accountMaintenanceRebateCriteria": "No fee if monthly commissions $10+ ($20+)",
+        "optionReducedCommissions": [
+          "$1.15/contract (10,000 - 49,999 contracts)",
+          "$1.05/contract (50,000 - 99,999 contracts)",
+          "$1/contract 100,000+ contracts (min $1.50)"
+        ],
+        "level12Data": "Multiple data packages available",
+        "marginAccountRate": [
+          "P + 1.5% under $140,000",
+          "P + 1% $140,000 - $1,400,000",
+          "P + 0.5% $1,400,000+"
+        ],
+        "mobile": "iOS/Android"
+      },
+      {
+        "id": "qtrade_investor",
+        "name": "Qtrade Investor",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/qtrade_investor_logo.png",
+        "minimumDeposit": "$1000",
+        "commissionEquity": "$8.75",
+        "etfOffers": "60 commission-free ETFs",
+        "accountMaintenance": "$25/qtr (+ $15 USD/qtr for every USD registered account)",
+        "roboAdvisor": "No",
+        "optionsCommissions": "6.95$ + 1.25$/contract",
+        "resources": "No",
+        "reducedCommissionsEquity": "$6.95 (100+ trade/qtr or $500,000+ assets)",
+        "internationalMarkets": "No",
+        "usdOnly": "Registered/Unregistered",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$20,000+ assets",
+          "2+ trades in last 3 months"
+        ],
+        "optionReducedCommissions": [
+          "$6.95 + $1.25/contract",
+          "(100+ trade/qtr or $500,000+ assets)"
+        ],
+        "level12Data": "No",
+        "marginAccountRate": [
+          "6.2% : under $10,000",
+          "6.15% : $10,000 - $49,999",
+          "6% : $50,000 - $99,999",
+          "5.65% : $100,000+"
+        ],
+        "mobile": "iOS/Website"
+      },
+      {
+        "id": "cibc",
+        "name": "CIBC Investor's Edge",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/cibc_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$6.95",
+        "etfOffers": "No",
+        "accountMaintenance": "$100/yr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$6.95 + $1.25/contract",
+        "resources": [
+          "Morningstar",
+          "Recognia"
+        ],
+        "reducedCommissionsEquity": "$4.95 (150+ trades/qtr)",
+        "internationalMarkets": "$300+",
+        "usdOnly": "No",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$25,000+ assets ",
+          "TFSA account"
+        ],
+        "optionReducedCommissions": "$4.95 + $1.25/contract (150+ trades/qtr)",
+        "level12Data": "No",
+        "marginAccountRate": "4.25%",
+        "mobile": "iOS/Android / Website"
+      },
+      {
+        "id": "desjardins",
+        "name": "Desjardins Online Brokerage",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/desjardins-online-brokerage.png",
+        "minimumDeposit": "$1000",
+        "commissionEquity": "$9.95",
+        "etfOffers": "No",
+        "accountMaintenance": "$30/qtr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$1.25/contract min $8.75",
+        "resources": [
+          "Guided portfolios",
+          "Morningstar",
+          "Training courses",
+          "Analysis tools"
+        ],
+        "reducedCommissionsEquity": [
+          "$0.01/share (min. $5 - max. $9.95)",
+          "(With premium platform subscription)"
+        ],
+        "internationalMarkets": "No",
+        "usdOnly": "Registered/Unregistered",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$15,000+ assets",
+          "or",
+          "Have any registered account",
+          "or",
+          "6+ trades in last 12 months"
+        ],
+        "optionReducedCommissions": "No",
+        "level12Data": [
+          "Level 1 - $60/month (Free with 31+ trades/month)",
+          "Level 2 - $105/month (Free with 41+ trades/month)"
+        ],
+        "marginAccountRate": [
+          "P + 1.25% under $100,000",
+          "P + 0.5% $100,000 - $499,999",
+          "P + 0% $500,000+"
+        ],
+        "mobile": "iOS/Android/Website"
+      },
+      {
+        "id": "credential_direct",
+        "name": "Credential Direct",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/credential_direct_logo.png",
+        "minimumDeposit": "$1000",
+        "commissionEquity": "$8.88",
+        "etfOffers": "No",
+        "accountMaintenance": "$25/qtr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$8.88 + 1.25$/contract",
+        "resources": [
+          "Morningstar",
+          "Recognia"
+        ],
+        "reducedCommissionsEquity": "No",
+        "internationalMarkets": "No",
+        "usdOnly": "Unregistered",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$15,000+ assets",
+          "or",
+          "New account (6 months free)",
+          "or",
+          "2+ trades in last 3 months",
+          "or",
+          "$100+/month pre-authorized contributions"
+        ],
+        "optionReducedCommissions": "No",
+        "level12Data": "Level 1 & 2 - Free",
+        "marginAccountRate": "P + 2%",
+        "mobile": "Website"
+      },
+      {
+        "id": "hsbc",
+        "name": "HSBC InvestDirect",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/hsbc_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$9.88",
+        "etfOffers": "No",
+        "accountMaintenance": "$25/qtr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$9.88 + $1.25/contract",
+        "resources": "Morningstar",
+        "reducedCommissionsEquity": "$6.88 (100+ trades/qtr or $500,000+ assets)",
+        "internationalMarkets": "Over 20 global markets with variable commission",
+        "usdOnly": "Unregistered",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": [
+          "$10,000+ assets",
+          "or",
+          "New account (3 months free)",
+          "or",
+          "Have any registered account",
+          "or",
+          "1+ trade(s) in last 3 months"
+        ],
+        "optionReducedCommissions": [
+          "$6.88 + $1.25/contract",
+          "(100+ trade/qtr or $500,000+ assets)"
+        ],
+        "level12Data": "No",
+        "marginAccountRate": "4.25%",
+        "mobile": "Website"
+      },
+      {
+        "id": "national_bank",
+        "name": "National Bank Direct Brokerage",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/national-bank-direct-brokerage.gif",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$9.95",
+        "etfOffers": "Zero commission on all Canadian ETFs",
+        "accountMaintenance": "$100/yr",
+        "roboAdvisor": "InvestCube",
+        "optionsCommissions": [
+          "$9.95 + $1.25/contract",
+          "Maximum $28.95 if trade value under $2,000"
+        ],
+        "resources": [
+          "Morningstar",
+          "Recognia"
+        ],
+        "reducedCommissionsEquity": [
+          "$6.95-$9.95",
+          "(30+ trades/qtr)"
+        ],
+        "internationalMarkets": "$75+",
+        "usdOnly": "Registered/Unregistered",
+        "dualCurrencyCadUsd": "No",
+        "accountMaintenanceRebateCriteria": "Assets $20,000+ assets 5+ trades in last 12 months",
+        "optionReducedCommissions": "$6.95 - $9.95 + $1.25/contract (30+ trades/qtr)",
+        "level12Data": [
+          "Level 1 - $39/month (Free with 10+ trades/month)",
+          "Level 2 - $99/month ($60/month with 10+ trades/month)",
+          "or",
+          "Free with 40+ trades/month"
+        ],
+        "marginAccountRate": [
+          "P + 1.25% under $10,000",
+          "P + 1% $10,000 - $99,999",
+          "P + 0% $100,000+"
+        ],
+        "mobile": "Website"
+      },
+      {
+        "id": "rbc",
+        "name": "RBC Direct Investing",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/rbc_logo.png",
+        "minimumDeposit": "$0",
+        "commissionEquity": "$9.95",
+        "etfOffers": "No",
+        "accountMaintenance": "$25/qtr",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$9.95+ $1.25/contract",
+        "resources": "Morningstar",
+        "reducedCommissionsEquity": "$6.95 (150+ trades/qtr)",
+        "internationalMarkets": "No",
+        "usdOnly": "N/A",
+        "dualCurrencyCadUsd": "Registered/Unregistered",
+        "accountMaintenanceRebateCriteria": [
+          "$15,000+ assets",
+          "New account (6 months free)",
+          "2+ trades in last 3 months",
+          "$100+/month pre-authorized contributions"
+        ],
+        "optionReducedCommissions": "$6.95 + $1.25/contract ($150+ trades/qtr)",
+        "level12Data": "Level 1 & 2 - Free with 30+ trades/qtr",
+        "marginAccountRate": [
+          "4.1%",
+          "$250,000+ assets:",
+          "4.1% under $25,000 3.6%",
+          "$25,000 - $99,999",
+          "P + 0% $100,000+"
+        ],
+        "mobile": "iOS/Android Website"
+      }
+    ]
+  },
+  "roboAdvisors": {
+    "headers": [[
+      {
+        "valueName": "imageUrl",
+        "label": "ROBO-ADVISOR",
+        "showLabelOnMobile": false
+      },
+      {
+        "valueName": "minimumDeposit",
+        "label": "MINIMUM DEPOSIT",
+        "description": "Amount required to open an account."
+      },
+      {
+        "valueName": "pricing",
+        "label": "PRICING",
+        "description": "Some robo-advisors offer portfolios of publicly available ETFs while others offer similar in-house funds."
+      },
+      {
+        "valueName": "portfolio",
+        "label": "PORTFOLIO",
+        "description": "Some robo-advisors offer portfolios of publicly available ETFs while others offer similar in-house funds."
+      },
+      {
+        "valueName": "promotionalOffers",
+        "label": "PROMOTIONAL OFFERS",
+        "description": "These offers, often available for a limited time, allow Hardbacon’s users to keep more bacon in their pockets. Every time a user redeem one of these offers using our links, we get a commission, which allow us to continue to work for you. ",
+        "showLabelOnMobile": false
+      }
+    ], [
+      {
+        "valueName": "taxOptimization",
+        "label": "TAX OPTIMIZATION",
+        "description": "Tax efficient funds work to minimize transactions with fiscal impacts. Tax loss harvesting is the practice of selling securities that have incurred losses to offset taxes on positive returns."
+      },
+      {
+        "valueName": "personalizedHelp",
+        "label": "PERSONALIZED HELP",
+        "description": "Robo-advisors are automated services but some offer an added layer of assistance to help you make sense of your investments."
+      },
+      {
+        "valueName": "mobile",
+        "label": "MOBILE",
+        "description": "Mobile application for iOS or Android."
+      },
+      {
+        "valueName": "rebalancing",
+        "label": "REBALANCING",
+        "description": "Periodically evaluate your current portfolio and adjust holdings to maintain investor's risk profile."
+      }
+    ]],
+    "entries": [
+      {
+        "id": "bmo_smartfolio",
+        "name": "BMO SmartFolio",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/bmo_smartfolio_logo.png",
+        "minimumDeposit": "$5000",
+        "pricing": [
+          "0.7% / $0 - $99,999",
+          "0.6% / $100,000 - $249,999",
+          "0.5% / $250,000 - $499,999",
+          "0.4% / $500,000+"
+        ],
+        "portfolio": "In-house funds",
+        "promotionalOffers": "Open an account and pay $0 in fees for a year on assets up to $15,000",
+        "taxOptimization": "N/A",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "wealthsimple",
+        "name": "Wealthsimple",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/wealthsimple_logo.jpg",
+        "minimumDeposit": "$0",
+        "pricing": [
+          "first $5,000",
+          "free 0.5% after"
+        ],
+        "portfolio": "ETFs",
+        "promotionalOffers": "Open an account and get $10,000 managed for free during 1 year",
+        "taxOptimization": "Tax efficiency",
+        "personalizedHelp": "On-demand advice",
+        "mobile": "iOS/Android",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "responsive",
+        "name": "Responsive",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2017/01/Screen-Shot-2017-01-20-at-4.52.13-PM.png",
+        "minimumDeposit": [
+          "TFSA + Taxable accounts: $10,000",
+          "RRSP: $15,000"
+        ],
+        "pricing": [
+          "0.8% up to $200,000",
+          "0.5% above $200,000"
+        ],
+        "portfolio": "ETFs",
+        "promotionalOffers": "Transfer your investments to Responsive and they'll pay your transfer fees up to $250",
+        "taxOptimization": "Tax efficiency",
+        "personalizedHelp": "Yes",
+        "mobile": "Optimized for mobile",
+        "rebalancing": "Yes"
+      },
+      {
+        "id": "portfolioiq",
+        "name": "Portfolio IQ",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/portfolioiq_logo.png",
+        "minimumDeposit": "$0",
+        "pricing": [
+          "$100 / $0 - $1,999",
+          "0.7% / $2,000 - $99,999",
+          "0.6% / $100,000 - $249,999",
+          "0.5% / $250,000 - $499,999",
+          "0.4% / $500,000 - $999,999",
+          "0.35% / $1,000,000+"
+        ],
+        "portfolio": "In-house funds",
+        "promotionalOffers": "Open an account and get the first month managed for free",
+        "taxOptimization": "Tax loss harvesting",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "N/A"
+      },
+      {
+        "id": "justwealth",
+        "name": "Justwealth",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/justwealth_logo.png",
+        "minimumDeposit": "$5000",
+        "pricing": [
+          "$120 / $0 - $24,999",
+          "0.5% / $25,000 - $499,999",
+          "0.4% / $500,000+"
+        ],
+        "portfolio": "ETFs",
+        "promotionalOffers": "Open a new account and get a $50 bonus",
+        "taxOptimization": "Tax efficient portfolios",
+        "personalizedHelp": "Account structuring, personal financial planning and portfolio transitioning",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "modernadvisor",
+        "name": "ModernAdvisor",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/modernadvisor_logo.png",
+        "minimumDeposit": "$0",
+        "pricing": [
+          "$49 / $0 - $9,999",
+          "0.5% / $10,000 - $99,999",
+          "0.4% / $100,000 - $499,999",
+          "0.35% / $500,000+"
+        ],
+        "portfolio": "ETFs",
+        "promotionalOffers": "Open a new account and get a $50 bonus",
+        "taxOptimization": "Tax efficiency",
+        "personalizedHelp": "Mutual fund fee report",
+        "mobile": "iOS/Android",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "nest_wealth",
+        "name": "Nest Wealth",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/nest_west_logo.png",
+        "minimumDeposit": "$0",
+        "pricing": [
+          "$240 / $0 - $74,999",
+          "$480 / $75,000 - $149,999",
+          "$960 / $150,000+"
+        ],
+        "portfolio": "ETFs",
+        "taxOptimization": "Tax efficiency (480$+)",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "idema",
+        "name": "Idema Placements",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/idemaplacements.png",
+        "minimumDeposit": "$25,000",
+        "pricing": "0.5% / $25,000 - $150,000 + 0.30% thereafter (min 250$/year)",
+        "portfolio": "ETFs",
+        "taxOptimization": [
+          "Tax-efficient portfolio",
+          "Tax-Loss Harvesting"
+        ],
+        "personalizedHelp": "Personalized portfolio management",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "smart_money",
+        "name": "Smart Money Capital Management",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/Screen-Shot-2016-08-30-at-12.04.46-PM.png",
+        "minimumDeposit": "5 000$",
+        "pricing": "0,45% + transaction fees (0,08% average)",
+        "portfolio": "FNB",
+        "taxOptimization": "N/A",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "investcube",
+        "name": "InvestCube",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/invest_cube.png",
+        "minimumDeposit": "$10 000",
+        "pricing": [
+          "0.85% - 1.04%** ",
+          "*Fees differ by portfolio ",
+          "*Fees includes ETFs management fees"
+        ],
+        "portfolio": "ETFs",
+        "taxOptimization": "N/A",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
+      },
+      {
+        "id": "wealthbar",
+        "name": "WealthBar",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/wealthbar_logo.png",
+        "minimumDeposit": "$0",
+        "pricing": [
+          "0% / $0 - $4,999",
+          "0.6% / $5,000 - $149,999",
+          "0.4% / $150,000 - $499,999",
+          "0.35% / $500,000+"
+        ],
+        "portfolio": "ETFs",
+        "taxOptimization": [
+          "Tax efficiency ($5,000+ assets)",
+          "Tax loss harvesting ($150,000+ assets)"
+        ],
+        "personalizedHelp": [
+          "On-demand advice",
+          "($150,000+ assets)"
+        ],
+        "mobile": "iOS/Android",
+        "rebalancing": "Automatic ($5,000+ assets)"
+      },
+      {
+        "id": "bmo_advice_direct",
+        "name": "BMO adviceDirect",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/bmo_advice_direct.png",
+        "minimumDeposit": "$50 000",
+        "pricing": [
+          "$750 / $0 - $99,999",
+          "0.75% / $100,000 - $499,999",
+          "$3750 / $500,000+"
+        ],
+        "portfolio": "Everything",
+        "taxOptimization": "On-demand",
+        "personalizedHelp": "Full service",
+        "mobile": "N/A",
+        "rebalancing": "On-demand"
+      },
+      {
+        "id": "tangerine",
+        "name": "Tangerine",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/tangerine-banque-geek.jpg",
+        "minimumDeposit": "$0",
+        "pricing": "1.07%",
+        "portfolio": "In-house funds",
+        "taxOptimization": "N/A",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "N/A"
+      },
+      {
+        "id": "steadyhand",
+        "name": "Steadyhand",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/steadyhand_logo.png",
+        "minimumDeposit": "$10 000",
+        "pricing": "0.65% - 1.78%",
+        "portfolio": "In-house funds",
+        "taxOptimization": "N/A",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "N/A"
+      },
+      {
+        "id": "invisor",
+        "name": "Invisor",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/invisor_logo.png",
+        "minimumDeposit": "$0",
+        "pricing": [
+          "0.6% / $0 - $99,999",
+          "0.5% / $100,000 - $249,999",
+          "0.4% / $250,000 - $499,999",
+          "0.3% / $500,000+"
+        ],
+        "portfolio": "ETFs / F-class",
+        "taxOptimization": "N/A",
+        "personalizedHelp": "N/A",
+        "mobile": "N/A",
+        "rebalancing": "Automatic"
       }
     ]
   }
