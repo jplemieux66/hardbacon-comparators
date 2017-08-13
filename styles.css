@@ -2,6 +2,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .comparator-header {
 	padding: 50px 20px
 }
@@ -117,14 +122,16 @@ body {
 }
 
 .comparator .comparator-table img {
+	border: 0;
 	width: 200px;
-	padding: 0
+	padding: 0;
 }
 
 @media (min-width: 992px) {
 	.comparator .comparator-table img {
-		width: 180px;
-		padding: 0 20px
+		border: 0;
+		width: 120px;
+		margin: 0 20px;
 	}
 }
 

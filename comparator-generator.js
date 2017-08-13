@@ -5,7 +5,7 @@ var generateHeaderRows = function (headers) {
   var $maintr = $ ('<tr>');
   $maintr.addClass ('header-row');
 
-  // Create the first row for the header
+  // Create the first Header Row
   headers[0].forEach (function (header) {
     var $th = $('<th>');
     $th.append(header.label);
@@ -17,7 +17,14 @@ var generateHeaderRows = function (headers) {
     $maintr.append($th);
   });
 
+  // If there is more than one Header Row, we generate the others and
+  // add a 'More details' button to the first Header Row
   if (headers.length > 1) {
+    headers[0].push({
+      "valueName": "moreDetails",
+      "label": "MORE DETAILS"
+    });
+
     var detailsth = '<th>' + 'More details' + '</th>';
     $maintr.append(detailsth);
     $mainthead.append($maintr);
@@ -53,13 +60,6 @@ var generateHeaderRows = function (headers) {
 var generateDataRows = function(data) {
   var generatedDataRows = [];
 
-  if (data.headers.length > 1) {
-    data.headers[0].push({
-      "valueName": "moreDetails",
-      "label": "MORE DETAILS"
-    });
-  }
-
   data.entries.forEach(function(entry) {
     var entryDataRows = [];
 
@@ -74,55 +74,24 @@ var generateDataRows = function(data) {
           $td.attr("data-label", header.label);
         }
         
-        if (header.description && !(header.valueName == "promotionalOffers")) {
+        if (header.description && header.valueName != "promotionalOffers") {
           var button = generateMobileTooltipButton(header.description);
           $td.append(button);
         }
 
-        if (header.valueName == "promotionalOffers") {
+        if (header.valueName == "promotionalOffers" && entry["promotionalOffers"] != undefined) {
           // If the header is Promotional Offers
-          var $button = $("<button>");
-          $button.attr("type", "button");
-          $button.addClass("btn btn-info");
-          $button.attr("data-toggle", "modal");
-          $button.attr("data-target", "#promotional-offer-modal");
-          $button.append(entry["promotionalOffers"]);
+          var button = generatePromotionalOffersButton(entry["name"], entry["promotionalOffers"]);
+          $td.append(button);
 
-          $td.append($button);
         } else if (header.valueName == "moreDetails") {
           // If the header is More Details
           var index = data.entries.indexOf(entry);
-          var $button = $("<button>");
-          $button.attr("type", "button");
-          $button.addClass("tooltip-category");
-          $button.attr("aria-hidden", "true");
-          $button.attr("data-toggle", "collapse");
-          $button.attr("id", "togglebtn" + index);
-          $button.attr("data-target", ".comparator-row" + index);
-          $button.attr("value", "More details");
-
-          var $glyphicon = $("<span>");
-          $glyphicon.addClass("glyphicon glyphicon-plus-sign");
-
-          $button.attr("onClick", 'var button = $(this); if (button.attr("value") == "More details") { button.attr("value", "Less details"); button.find(".glyphicon").removeClass("glyphicon-plus-sign"); button.find(".glyphicon").addClass("glyphicon-minus-sign");} else {button.attr("value", "More details");button.find(".glyphicon").removeClass("glyphicon-minus-sign");button.find(".glyphicon").addClass("glyphicon-plus-sign");}');
-          $button.click(function(e) {
-            var button = $(e.target);
-            if (button.attr("value") == "More details") {
-              button.attr("value", "Less details");
-              button.find(".glyphicon").removeClass("glyphicon-plus-sign");
-              button.find(".glyphicon").addClass("glyphicon-minus-sign");
-            } else {
-              button.attr("value", "More details");
-              button.find(".glyphicon").removeClass("glyphicon-minus-sign");
-              button.find(".glyphicon").addClass("glyphicon-plus-sign");
-            }
-          });
-
-          $button.append($glyphicon);
-          $td.append($button);
+          var button = generateMoreDetailsButton(index);
+          $td.append(button);
         } else {
           var value = entry[header.valueName];
-          if (isPNGImage(value)) {
+          if (isImage(value)) {
             // If the data is an image (.png)
             var $img = $("<img>");
             $img.attr("src", value);
@@ -132,11 +101,11 @@ var generateDataRows = function(data) {
             // If the data is an array (multiple lines of text)
             var $p = $("<p>");
             value.forEach(function(line) {
-              $p.append('"' + line + '"');
+              $p.append(line);
               $p.append("<br>");
             });
             $td.append($p);
-          } else {
+          } else if (value != undefined) {
             // Else, data is a single line of text. 
             $td.append("<p>" + value + "</p>");
           }
@@ -153,17 +122,7 @@ var generateDataRows = function(data) {
   });
 
   return generatedDataRows;
-}
-
-var isPNGImage = function(value) {
-  if ((typeof value) == "string") {
-    var splitValue = value.split('.');
-    if(splitValue[splitValue.length - 1] == 'png') {
-      return true;
-    }
-  }
-  return false;
-}
+};
 
 var generateTooltipButton = function(content) {
   var $button = $("<button>");
@@ -183,7 +142,7 @@ var generateTooltipButton = function(content) {
   $button.append($glyphicon);
 
   return $button;
-}
+};
 
 var generateMobileTooltipButton = function(content) {
   var $button = generateTooltipButton(content);
@@ -191,38 +150,73 @@ var generateMobileTooltipButton = function(content) {
   $button.attr("data-placement", "top");
 
   return $button;
-}
-
-var config = {
-  apiKey: 'AIzaSyCEqRHvphWUbE-7GsEd_tvZqbytpbKHVog',
-  authDomain: 'hardbacon-comparators.firebaseapp.com',
-  databaseURL: 'https://hardbacon-comparators.firebaseio.com',
-  projectId: 'hardbacon-comparators',
-  storageBucket: 'hardbacon-comparators.appspot.com',
-  messagingSenderId: '249486670235',
 };
 
-firebase.initializeApp(config);
+var generatePromotionalOffersButton = function(name, description) {
+  var $button = $("<button>");
+  $button.attr("type", "button");
+  $button.addClass("btn btn-info");
+  $button.attr("data-toggle", "modal");
+  $button.attr("data-target", "#promotional-offer-modal");
+  $button.append(description);
 
-var brokeragesSnapshot = firebase.database().ref('/brokerages').once('value', function(dataSnapshot) {
-  var brokerages = dataSnapshot.val();
+  $button.attr("onClick", "$('.promotional-offer-text').text('We’ll send you an email right away with all the info you need to redeem the promotional offer from " 
+  + name + ". Before we do that, we need you to give us your name and email address below.')");
 
+  return $button;
+};
+
+var generateMoreDetailsButton = function (index) {
+  var $button = $ ('<button>');
+  $button.attr('type', 'button');
+  $button.addClass('tooltip-category');
+  $button.attr('aria-hidden', 'true');
+  $button.attr('data-toggle', 'collapse');
+  $button.attr('id', 'togglebtn' + index);
+  $button.attr('data-target', '.comparator-row' + index);
+  $button.attr('value', 'More details');
+
+  var $glyphicon = $('<span>');
+  $glyphicon.addClass('glyphicon glyphicon-plus-sign');
+
+  $button.attr(
+    'onClick',
+    'var button = $(this); if (button.attr("value") == "More details") { button.attr("value", "Less details"); button.find(".glyphicon").removeClass("glyphicon-plus-sign"); button.find(".glyphicon").addClass("glyphicon-minus-sign");} else {button.attr("value", "More details");button.find(".glyphicon").removeClass("glyphicon-minus-sign");button.find(".glyphicon").addClass("glyphicon-plus-sign");}'
+  );
+
+  $button.append($glyphicon);
+
+  return $button
+};
+
+var isImage = function(value) {
+  if ((typeof value) == "string") {
+    var splitValue = value.split('.');
+    var ext = splitValue[splitValue.length - 1];
+    if(ext == 'png' || ext == 'gif' || ext == 'jpg' || ext == 'jpeg') {
+      return true;
+    }
+  }
+  return false;
+};
+
+var initializePage = function(firebaseTableObject, htmlTableId) {
   // Generate Rows and Headers
-  var headerRows = generateHeaderRows(brokerages.headers);
-  var dataRows = generateDataRows(brokerages);
+  var headerRows = generateHeaderRows(firebaseTableObject.headers);
+  var dataRows = generateDataRows(firebaseTableObject);
 
   //Append First Row (different from the other rows)
   var $firstHeaderRow = headerRows[0].clone();
-  $("#brokerage-table").append($firstHeaderRow);
-  $("#brokerage-table").append(dataRows[0][0]);
+  $("#"+ htmlTableId).append($firstHeaderRow);
+  $("#"+ htmlTableId).append(dataRows[0][0]);
 
   for (var i = 1; i < headerRows.length; i++) {
     var firstComparatorRowClass = "comparator-row0 collapse";
     var $headerRow = headerRows[i].clone();
     $headerRow.find("tr").addClass(firstComparatorRowClass);
-    $("#brokerage-table").append($headerRow);
+    $("#"+ htmlTableId).append($headerRow);
     dataRows[0][i].find("tr").addClass(firstComparatorRowClass);
-    $("#brokerage-table").append(dataRows[0][i]);
+    $("#"+ htmlTableId).append(dataRows[0][i]);
   }
 
   // Append all other Rows
@@ -231,15 +225,18 @@ var brokeragesSnapshot = firebase.database().ref('/brokerages').once('value', fu
       var comparatorRowClass = "comparator-row" + i + " collapse";
       var $headerRow = headerRows[j].clone();
       $headerRow.find("tr").addClass(comparatorRowClass);
-      $("#brokerage-table").append($headerRow);
+      $("#"+ htmlTableId).append($headerRow);
       if (j != 0) {
         dataRows[i][j].find("tr").addClass(comparatorRowClass);
       }
-      $("#brokerage-table").append(dataRows[i][j]);
+      $("#"+ htmlTableId).append(dataRows[i][j]);
     }
   }
 
   $('[data-toggle="popover"]').popover(); 
-}, function(error) {
-  console.log(error);
-});
+}
+
+var comparatorGenerator = {
+  initializePage: initializePage
+}
+
