@@ -50,6 +50,28 @@ Every Entry is a JSON object, and each property represents a value.
   A little lower on the page, modify the 'url' property of the AJAX request to a new post URL, with format 'generate-(DATANAME)-table'. This server route will be created later.
   
   #### Modify server.js
+  3 routes need to be created in the file server.js. Copy-paste this snippet above the call to app.listen, and replace DATANAME by the data that is shown in the comparator.
   
+  
+  // DATANAME
+app.use('/generate-DATANAME-page', express.static(__dirname + '/public/DATANAME'));
+
+app.post('/generated-DATANAME-page', (req, res) => {
+    var html = req.body.html;
+    html = "<!doctype html> \n" + html;
+    html = html.replace('  <script src="comparator-generator.js"></script>', '');
+    html = html.replace('  <!-- Custom JavaScript files --> ', '');
+    html = html.replace('  <script src="brokerages.js"></script>', '');
+
+    fs.writeFile(__dirname + '/public/DATANAME/cached_DATANAME.html', html, (err) => {
+        if (err) throw err;
+        console.log('Cached DATANAME page has been successfully generated');
+        res.end();
+    });
+});
+
+app.get('/DATANAME', (req, res) => {
+    res.sendFile(__dirname + '/public/brokerages/cached_DATANAME.html');
+});
   
    
