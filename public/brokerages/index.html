@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Brokerages Comparator</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custom JavaScript files --> 
+  <script src="comparator-generator.js"></script>
+  <script src="brokerages.js"></script>
+  <!-- Custom CSS -->
+  <style type="text/css">
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .comparator-header {
+      padding: 50px 20px
+    }
+
+    @media (min-width: 992px) {
+      .comparator-header {
+        padding: 6vw 20vw
+      }
+    }
+
+    .comparator {
+      padding: 0 5%;
+      margin-bottom: 80px !important
+    }
+
+    .comparator .tooltip-category {
+      background: none;
+      margin: 0 auto;
+      border: none;
+      outline: none;
+      color: #00cccc
+    }
+
+    @media (min-width: 992px) {
+      .comparator .tooltip-category.mobile {
+        display: none
+      }
+    }
+
+    .comparator .tooltip-category .glyphicon {
+      font-size: 16px
+    }
+
+    .comparator .comparator-information {
+      font-family: 'FuturaLTPro-Book', sans-serif
+    }
+
+    .comparator .comparator-name {
+      font-family: 'FuturaLTPro-Book', sans-serif;
+      font-size: 56px;
+      font-weight: 100
+    }
+
+    .comparator .brokerage {
+      cursor: pointer
+    }
+
+    .comparator .brokerage.selected {
+      background: #dedede
+    }
+
+    .comparator .robo {
+      cursor: pointer
+    }
+
+    .comparator .robo.selected {
+      background: #dedede;
+      border-radius: 0
+    }
+
+    .comparator .tab-control {
+      background-color: #ececec;
+      margin-top: 50px;
+      border-radius: 25px 25px 0 0;
+      color: #fff;
+      padding-bottom: 15px;
+      padding-top: 15px
+    }
+
+    .comparator h3 {
+      margin: 20px 0;
+      text-transform: uppercase
+    }
+
+    .comparator .comparator-table.brokerage-table th,
+    .comparator .comparator-table.brokerage-table td {
+      text-align: center;
+      width: 100%
+    }
+
+    @media (min-width: 992px) {
+      .comparator .comparator-table.brokerage-table th,
+      .comparator .comparator-table.brokerage-table td {
+        width: calc(100% / 7);
+        display: flex;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-flex-direction: column
+      }
+    }
+
+    .comparator .comparator-table {
+      background-color: #fff
+    }
+
+    .comparator .comparator-table thead th {
+      padding-top: 30px
+    }
+
+    .comparator .comparator-table .btn-cmpt-details {
+      border: none
+    }
+
+    .comparator .comparator-table .brokerrow p,
+    .comparator .comparator-table .roborow p {
+      text-transform: uppercase;
+      font-size: 14px
+    }
+
+    .comparator .comparator-table .glyphicon-plus-sign,
+    .comparator .comparator-table .glyphicon-minus-sign {
+      font-size: 2em
+    }
+
+    .comparator .comparator-table img {
+      border: 0;
+      width: 200px;
+      padding: 0;
+    }
+
+    @media (min-width: 992px) {
+      .comparator .comparator-table img {
+        border: 0;
+        width: 120px;
+        margin: 0 20px;
+      }
+    }
+
+    .comparator .comparator-table tbody tr.collapse {
+      border-bottom: 10px solid #efefef !important
+    }
+
+    .comparator .comparator-table tbody #mainheadercomparator {
+      border-bottom: none !important
+    }
+
+    .comparator .comparator-table td {
+      border-bottom: 1px solid #dcdcdc;
+      padding: 20px 0
+    }
+
+    .comparator .comparator-table td p {
+      margin: 0;
+      text-align: center !important;
+      font-size: 12px;
+      padding: 0
+    }
+
+    .comparator .comparator-table tr {
+      display: inline-flex;
+      flex-direction: column;
+      display: -webkit-inline-flex;
+      -webkit-flex-direction: column;
+      width: 100%;
+      text-align: center
+    }
+
+    @media (min-width: 992px) {
+      .comparator .comparator-table tr {
+        flex-direction: row;
+        -webkit-flex-direction: row
+      }
+    }
+
+    .comparator .comparator-table th {
+      text-transform: uppercase;
+      background: #f8f8f8;
+      vertical-align: top;
+      text-align: center;
+      font-weight: 300;
+      font-size: 14px;
+      padding: 5px 0
+    }
+
+    .comparator .comparator-table tbody td {
+      justify-content: center
+    }
+
+    .comparator .comparator-table tbody td:before {
+      content: attr(data-label);
+      font-weight: 900;
+      color: #000;
+      text-transform: uppercase
+    }
+
+    @media (min-width: 992px) {
+      .comparator .comparator-table tbody td:before {
+        content: ''
+      }
+    }
+
+    .comparator .comparator-table tbody td:last-of-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      -webkit-justify-content: center
+    }
+
+    .comparator .comparator-table th,
+    .comparator .comparator-table td {
+      text-align: center;
+      width: 100%
+    }
+
+    @media (min-width: 992px) {
+      .comparator .comparator-table th,
+      .comparator .comparator-table td {
+        width: calc(100% / 6);
+        display: flex;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-flex-direction: column
+      }
+    }
+
+    .comparator .comparator-table .collapse {
+      transition: all .6s;
+      display: none
+    }
+
+    .comparator .comparator-table .collapse.in {
+      display: inline-flex;
+      display: -webkit-inline-flex;
+      width: 100%;
+      text-align: center
+    }
+    /* EXTRA.CSS */
+
+    @media (max-width: 988px) {
+      .comparator .comparator-table thead {
+        display: none;
+      }
+      td[c-label]:before {
+        content: attr(data-label);
+        /* no quotes around attribute name! */
+        font-weight: bold;
+        font-size: 18px;
+        padding-bottom: 5px;
+      }
+      .comparator .comparator-table td {
+        height: auto;
+      }
+      .comparator .tooltip-category {
+        padding: 10px;
+      }
+      .comparator .comparator-table td .btn-cmpt-details {
+        margin: 25px;
+      }
+    }
+
+    .comparator {
+      margin: 0;
+      background-color: #FFFFFF;
+    }
+
+    .comparator .comparator-border {
+      padding: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    /* CUSTOM CSS */
+
+    .form-control {
+      border-radius: 2px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .btn {
+      border: none;
+      background-color: #1ac1c1;
+    }
+
+    .btn:hover {
+      border: none;
+      background-color: #00CCCC;
+    }
+
+    .btn:focus {
+      border: none;
+      background-color: #1ac1c1;
+    }
+
+    .btn:active:focus {
+      border: none;
+      background-color: #1ac1c1;
+    }
+
+    .btn-info {
+      max-width: 150px;
+      white-space: normal;
+    }
+
+    #promotional-offer-modal .modal-body {
+      text-align: center;
+    }
+
+    #promotional-offer-modal .modal-header h4 {
+      font-size: 26px;
+      text-align: center;
+    }
+
+    #promotional-offer-modal .modal-header .close {
+      font-size: 40px;
+    }
+
+    .promotional-offer-text {
+      padding: 20px 0;
+    }
+
+    .promotional-offer-text-input {
+      margin: 0 auto 20px auto;
+      display: block;
+      max-width: 230px;
+      border: none;
+      border-bottom: 3px solid #00cccc;
+      padding-bottom: 7px;
+      font-size: 22px;
+    }
+
+    .promotional-offer-text-input:focus {
+      border-color: #D3D3D3;
+      border-bottom: 3px solid #00cccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="comparator col-xs-12">
+    <div class="comparator-border col-xs-12">
+      <div class="text-center">
+        <table id="brokerages-table" class="comparator-table col-lg-12 col-md-12 cold-sm-12 col-xs-12">
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="promotional-offer-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Promotional Offer</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <p class="promotional-offer-text">
+              We’ll send you an email right away with all the info you need to redeem the promotional offer from XXXXXXXXX. Before we do
+              that, we need you to give us your name and email address below.
+            </p>
+            <p>
+              <input type="text" name="name" class="promotional-offer-text-input form-control" required="required" placeholder="Name">
+            </p>
+            <p>
+              <input type="text" name="email" class="promotional-offer-text-input form-control" required="required" placeholder="Email">
+            </p>
+            <p>ReCaptcha will go here</p>
+            <p>
+              <input type="submit" class="btn btn-info btn-lg" value="Submit">
+            </p>
+            <p>
+              <input type="checkbox" id="subscribe-checkbox"> Subscribe me to Hardbacon's newsletter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

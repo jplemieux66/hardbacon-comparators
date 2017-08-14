@@ -1,0 +1,23 @@
+{
+  "name": "hardbacon-comparators",
+  "version": "1.0.0",
+  "description": "A tool to generate comparator tables for Hardbacon using Firebase for the data, jQuery to generate the tables, Bootstrap for styling and Node.js for server-side code.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jplemieux66/hardbacon-comparators.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jplemieux66/hardbacon-comparators/issues"
+  },
+  "homepage": "https://github.com/jplemieux66/hardbacon-comparators#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  }
+}
