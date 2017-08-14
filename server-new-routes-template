@@ -1,0 +1,20 @@
+// DATANAME
+app.use('/generate-DATANAME-page', express.static(__dirname + '/public/DATANAME'));
+
+app.post('/generated-DATANAME-page', (req, res) => {
+    var html = req.body.html;
+    html = "<!doctype html> \n" + html;
+    html = html.replace('  <script src="comparator-generator.js"></script>', '');
+    html = html.replace('  <!-- Custom JavaScript files --> ', '');
+    html = html.replace('  <script src="brokerages.js"></script>', '');
+
+    fs.writeFile(__dirname + '/public/DATANAME/cached_DATANAME.html', html, (err) => {
+        if (err) throw err;
+        console.log('Cached DATANAME page has been successfully generated');
+        res.end();
+    });
+});
+
+app.get('/DATANAME', (req, res) => {
+    res.sendFile(__dirname + '/public/brokerages/cached_DATANAME.html');
+});
