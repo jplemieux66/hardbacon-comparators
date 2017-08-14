@@ -28,4 +28,28 @@ Every Entry is a JSON object, and each property represents a value.
   Finally, if there is a promotional offer, the description can be put in the property value, and a button which activates the popup will   be created. 
   
   **Make sure the 'name' property is correctly set so the popup text is accordingly adjusted**
+  
+  ## Regenerate Tables
+  
+  For performance reasons, the tables are cached on the server and will not update automatically if the data is changed.
+  If you want to regenerate the tables, visit the following URLS:
+  
+  **Brokerages**: /generate-brokerages-page
+  **Robo-Advisors**: /generate-roboadvisors-page
+  
+  ## Guide: How to create a new comparator
+  
+  ##### Create a new directory in /public/ with the appropriate comparator name.
+  ##### Copy files from /public/template
+  In index.html, change the title to something more appropriate
+  In initialization.js, locate this line: 
+  
+  var snapshot = firebase.database().ref('/FIREBASEREF').once('value', function(dataSnapshot) {
+  
+  and replace FIREBASEREF with the appropriate Firebase table name.
+  A little lower on the page, modify the 'url' property of the AJAX request to a new post URL, with format 'generate-(DATANAME)-table'. This server route will be created later.
+  
+  #### Modify server.js
+  
+  
    
