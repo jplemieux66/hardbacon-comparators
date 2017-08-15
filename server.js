@@ -50,6 +50,11 @@ app.get('/roboadvisors', (req, res) => {
     res.sendFile(__dirname + '/public/roboadvisors/cached_roboadvisors.html');
 });
 
+// Send Email Route
+app.post('/send-email', (req, res) => {
+    console.log(req);
+});
+
 app.listen(port, () => {
     console.log(`Started on port ${port}`);
 });
