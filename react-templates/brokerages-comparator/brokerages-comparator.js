@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Comparator from './components/Comparator/Comparator';
+import Comparator from './../components/Comparator/Comparator';
+import './../styles.css';
 
 var config = {
   apiKey: 'AIzaSyCEqRHvphWUbE-7GsEd_tvZqbytpbKHVog',
