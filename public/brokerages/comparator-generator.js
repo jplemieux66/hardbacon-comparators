@@ -161,7 +161,7 @@ var generatePromotionalOffersButton = function(name, description) {
   $button.append(description);
 
   $button.attr("onClick", "$('.promotional-offer-text').text('We’ll send you an email right away with all the info you need to redeem the promotional offer from " 
-  + name + ". Before we do that, we need you to give us your name and email address below.')");
+  + name + ". Before we do that, we need you to give us your name and email address below.'); $('#offer-name-input').attr('value', '" + name + "');");
 
   return $button;
 };

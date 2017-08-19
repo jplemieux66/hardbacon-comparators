@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const fs = require('fs');
+const email = require('./email.js');
 
 var app = express();
 const port = process.env.PORT || 3000;
@@ -52,7 +53,14 @@ app.get('/roboadvisors', (req, res) => {
 
 // Send Email Route
 app.post('/send-email', (req, res) => {
-    console.log(req);
+    var recaptcha = req.body["g-recaptcha-response"];
+    if (recaptcha != "") {
+        email.sendEmail(req.body.email, req.body.name, req.body.offerName);
+    }
+    if (req.body.subscribe == "on") {
+        email.addSubscriber(req.body.email, req.body.name, req.body.offerName);
+    }
+    res.end();
 });
 
 app.listen(port, () => {

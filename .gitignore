@@ -1,3 +1,5 @@
 node_modules/
 local/
 .vscode/
+firebase-config.js
+email.js

@@ -8,6 +8,7 @@
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- jQuery -->
@@ -362,6 +363,11 @@
       width: 304px;
       margin: 0 auto;
     }
+
+    #offer-name {
+      visibility: collapse;
+      position: absolute;
+    }
   </style>
 </head>
 
@@ -389,20 +395,21 @@
               We’ll send you an email right away with all the info you need to redeem the promotional offer from XXXXXXXXX. Before we do
               that, we need you to give us your name and email address below.
             </p>
+            <input type="hidden" name="offerName" id="offer-name-input">
             <p>
               <input type="text" name="name" class="promotional-offer-text-input form-control" required="required" placeholder="Name">
             </p>
             <p>
-              <input type="text" name="email" class="promotional-offer-text-input form-control" required="required" placeholder="Email">
+              <input type="email" name="email" class="promotional-offer-text-input form-control" required="required" placeholder="Email">
             </p>
             <p>
               <div class="g-recaptcha" data-sitekey="6LeW-iwUAAAAAGMImWgEdHyZPYQTiaz6hh2ITYPT"></div>
             </p>
             <p>
-              <input type="submit" class="btn btn-info btn-lg" value="Submit">
+              <input type="checkbox" name="subscribe" id="subscribe-checkbox"> Subscribe me to Hardbacon's newsletter.
             </p>
             <p>
-              <input type="checkbox" id="subscribe-checkbox"> Subscribe me to Hardbacon's newsletter.
+              <input type="submit" class="btn btn-info btn-lg" value="Submit">
             </p>
           </form>
         </div>

@@ -18,6 +18,8 @@
   "homepage": "https://github.com/jplemieux66/hardbacon-comparators#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.4"
+    "crypto": "^1.0.1",
+    "express": "^4.15.4",
+    "restler": "^3.4.0"
   }
 }

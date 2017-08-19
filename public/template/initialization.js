@@ -1,13 +1,4 @@
-var config = {
-  apiKey: 'AIzaSyCEqRHvphWUbE-7GsEd_tvZqbytpbKHVog',
-  authDomain: 'hardbacon-comparators.firebaseapp.com',
-  databaseURL: 'https://hardbacon-comparators.firebaseio.com',
-  projectId: 'hardbacon-comparators',
-  storageBucket: 'hardbacon-comparators.appspot.com',
-  messagingSenderId: '249486670235',
-};
-
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 var snapshot = firebase.database().ref('/FIREBASEREF').once('value', function(dataSnapshot) {
   var data = dataSnapshot.val();
