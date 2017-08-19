@@ -1,42 +1,52 @@
 import React, { Component } from 'react';
-import TooltipButton from './../TooltipButton/TooltipButton';
+import Header from './Header'
+import PropTypes from 'prop-types';
 
-class Header extends Component {
+class HeaderRow extends Component {
   constructor(props) {
     super(props);
 
-    this.generateTooltipButton = this.generateTooltipButton.bind(this);
+    this.generateMoreDetailsHeader = this.generateMoreDetailsHeader.bind(this);
   }
 
-  render() {
-    return (
-      <th>
-        {this.props.header.label}
-        <br/>
-        {this.generateTooltipButton()}
-      </th>
-    )
-  }
-
-  generateTooltipButton() {
-    if (this.props.header.description != undefined) {
-      return <TooltipButton content={this.props.description} />
-    }
-  }
-}
-
-class HeaderRow extends Component {
   render() {
     return (
       <thead>
         <tr className="header-row">
           {this.props.headers.map((header, index) => (
-            <Header header={header} key={index}/>
+            <Header label={header.label} 
+                    description={header.description} 
+                    key={index}/>
           ))}
+          {
+            this.generateMoreDetailsHeader()
+          }
         </tr>
       </thead>
     )
   }
+
+  generateMoreDetailsHeader() {
+    const { isFirstOfMany, language } = this.props;
+    
+    if (isFirstOfMany) {
+      let label;
+
+      if (language == "fr") {
+        label = "PLUS DE DÉTAILS"
+      } else {
+        label = "MORE DETAILS"
+      }
+
+      return <Header label={label} />
+    }
+  }
+}
+
+HeaderRow.propTypes = {
+  headers: PropTypes.array,
+  isFirstOfMany: PropTypes.bool,
+  language: PropTypes.string
 }
 
 export default HeaderRow;

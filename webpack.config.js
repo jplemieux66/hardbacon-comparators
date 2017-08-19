@@ -2,7 +2,7 @@ var HTMLWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: __dirname + '/react-templates/brokerages-comparator/brokerages-comparator.html',
   filename: 'index.html',
-  inject: 'body'
+  inject: 'head'
 });
 
 module.exports = {

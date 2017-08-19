@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Comparator from './../components/Comparator/Comparator';
-import './../styles.css';
+import firebase from 'firebase';
+// import './../styles.css';
 
 var config = {
   apiKey: 'AIzaSyCEqRHvphWUbE-7GsEd_tvZqbytpbKHVog',
@@ -21,6 +22,7 @@ firebase.database().ref('/brokerages').once('value').then((dataSnapshot) => {
     <Comparator data={data}/>,
     document.getElementById('root')
   );
+
 }).catch((error) => {
   console.log(error);
 });

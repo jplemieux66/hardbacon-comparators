@@ -3,11 +3,28 @@ const express = require('express');
 const fs = require('fs');
 const email = require('./email.js');
 
+import React from 'react';
+const ReactDOMServer = require('react-dom/server');
+import firebase from 'firebase';
+import Comparator from './react-templates/components/Comparator/Comparator';
+import template from './template.js';
+
 var app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({limit: '5mb', extended: true}));
+
+var config = {
+  apiKey: 'AIzaSyCEqRHvphWUbE-7GsEd_tvZqbytpbKHVog',
+  authDomain: 'hardbacon-comparators.firebaseapp.com',
+  databaseURL: 'https://hardbacon-comparators.firebaseio.com',
+  projectId: 'hardbacon-comparators',
+  storageBucket: 'hardbacon-comparators.appspot.com',
+  messagingSenderId: '249486670235',
+};
+
+firebase.initializeApp(config);
 
 // BROKERAGES
 app.use('/generate-brokerages-page', express.static(__dirname + '/public/brokerages'));
@@ -62,6 +79,25 @@ app.post('/send-email', (req, res) => {
     }
     res.end();
 });
+
+app.use('/assets', express.static(__dirname + '/assets'));
+
+app.get('/react-brokerages', (req, res) => {
+  firebase
+    .database()
+    .ref('/brokerages_en')
+    .once('value')
+    .then(dataSnapshot => {
+      var data = dataSnapshot.val ();
+
+      var markup = ReactDOMServer.renderToStaticMarkup(<Comparator data={data} />);
+      res.send(template(markup));
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
+
 
 app.listen(port, () => {
     console.log(`Started on port ${port}`);

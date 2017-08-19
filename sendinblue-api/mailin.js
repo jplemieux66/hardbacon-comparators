@@ -1,6 +1,6 @@
 var rest = require('restler');
 
-Mailin = rest.service(function(base_url,api_key,timeout) {
+export default rest.service(function(base_url,api_key,timeout) {
 	this.base_url = base_url;
 	this.api_key = api_key;
 	this.timeout = timeout;
