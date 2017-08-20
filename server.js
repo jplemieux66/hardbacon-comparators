@@ -10,7 +10,7 @@ import Comparator from './react-templates/components/Comparator/Comparator';
 import template from './template.js';
 
 var app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3003;
 
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({limit: '5mb', extended: true}));

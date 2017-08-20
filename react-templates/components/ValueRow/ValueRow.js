@@ -12,7 +12,7 @@ class ValueRow extends Component {
   }
 
   render() {
-    const { headerRow, entryObject } = this.props;
+    const { headerRow, entryObject, language } = this.props;
 
     return (
       <tbody>
@@ -22,6 +22,7 @@ class ValueRow extends Component {
               {
                  return <PromotionalOffersCell offerDescription={entryObject["promotionalOffers"]}
                                                name={entryObject.name}
+                                               language={language}
                                                key={index} />
               }
               return <Cell value={entryObject[header.valueName]} 

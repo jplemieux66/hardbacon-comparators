@@ -26,8 +26,7 @@ class MoreDetailsCell extends Component {
                 value={moreDetails}
                 data-more-details={moreDetails}
                 data-less-details={lessDetails}>
-          <span className="glyphicon glyphicon-plus-sign"
-                onClick={`var button = $(this); if (button.attr("value") == ${moreDetails}) { button.attr("value", ${lessDetails}); button.find(".glyphicon").removeClass("glyphicon-plus-sign"); button.find(".glyphicon").addClass("glyphicon-minus-sign");} else {button.attr("value", "${moreDetails}");button.find(".glyphicon").removeClass("glyphicon-minus-sign");button.find(".glyphicon").addClass("glyphicon-plus-sign");}`}></span>
+          <span className="glyphicon glyphicon-plus-sign"></span>
         </button>
       </td>
     );
