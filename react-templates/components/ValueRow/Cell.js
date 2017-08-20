@@ -11,10 +11,10 @@ class Cell extends Component {
   }
 
   render() {
-    const { label } = this.props;
+    const { label, showLabelOnMobile } = this.props;
 
     return (
-      <td data-label={label}>
+      <td data-label={showLabelOnMobile ? label : ""}>
         {this.generateTooltipButton()}
         {this.generateCellContent()}
       </td>
@@ -39,8 +39,8 @@ class Cell extends Component {
         <div>
           {
             value.map((line, index) => ([
-              <p key={`p${index}`}>{line}</p>,
-              <br key={`br${index}`}></br>
+              line,
+              <br key={index}></br>
             ]))
           }
         </div>
@@ -62,11 +62,16 @@ class Cell extends Component {
   }
 }
 
+Cell.defaultProps = {
+  showLabelOnMobile: true
+}
+
 Cell.propTypes = {
   value: PropTypes.any,
   label: PropTypes.string,
   description: PropTypes.string,
-  valueName: PropTypes.string
+  valueName: PropTypes.string,
+  showLabelOnMobile: PropTypes.bool
 }
 
 export default Cell;

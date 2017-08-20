@@ -29,6 +29,7 @@ class ValueRow extends Component {
                            label={header.label}
                            description={header.description}
                            valueName={header.valueName}
+                           showLabelOnMobile={header.showLabelOnMobile}
                            key={index} /> 
           })}
           {
