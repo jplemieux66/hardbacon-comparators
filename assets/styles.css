@@ -1,10 +1,10 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .comparator-header {
@@ -23,8 +23,8 @@ img {
 }
 
 .comparator .tooltip-category {
-  background: none;
-  margin: 0 auto;
+	background: none;
+	margin: 0 auto;
 	border: none;
 	outline: none;
 	color: #00cccc
@@ -235,49 +235,46 @@ img {
 	width: 100%;
 	text-align: center
 }
-
 /* EXTRA.CSS */
-@media (max-width: 988px){
-   .comparator .comparator-table thead{
-     display:none;
-   }
-   td[c-label]:before {
-	content: attr(data-label); /* no quotes around attribute name! */
-	font-weight: bold;
-        font-size: 18px;
-        padding-bottom: 5px;
-   }
-   .comparator .comparator-table td
-   {
-     height:auto;
-   }
-   .comparator .tooltip-category
-   {
-     padding:10px;
-   }
-   .comparator .comparator-table td .btn-cmpt-details
-   {
-     margin: 25px;
-   }
 
+@media (max-width: 988px) {
+	.comparator .comparator-table thead {
+		display: none;
+	}
+	td[c-label]:before {
+		content: attr(data-label);
+		/* no quotes around attribute name! */
+		font-weight: bold;
+		font-size: 18px;
+		padding-bottom: 5px;
+	}
+	.comparator .comparator-table td {
+		height: auto;
+	}
+	.comparator .tooltip-category {
+		padding: 10px;
+	}
+	.comparator .comparator-table td .btn-cmpt-details {
+		margin: 25px;
+	}
 }
 
 .comparator {
-    margin: 0;
-    background-color: #FFFFFF;
-}
-.comparator .comparator-border {
-    padding: 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	margin: 0;
+	background-color: #FFFFFF;
 }
 
+.comparator .comparator-border {
+	padding: 0;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
 /* CUSTOM CSS */
 
 .form-control {
 	border-radius: 2px;
 	-webkit-box-shadow: none;
-  -moz-box-shadow:    none;
-  box-shadow:         none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 .btn {
@@ -302,7 +299,7 @@ img {
 
 .btn-info {
 	max-width: 150px;
-	white-space:normal;
+	white-space: normal;
 }
 
 #promotional-offer-modal .modal-body {
@@ -335,4 +332,14 @@ img {
 .promotional-offer-text-input:focus {
 	border-color: #D3D3D3;
 	border-bottom: 3px solid #00cccc;
+}
+
+.g-recaptcha {
+	width: 304px;
+	margin: 0 auto;
+}
+
+#offer-name {
+	visibility: collapse;
+	position: absolute;
 }

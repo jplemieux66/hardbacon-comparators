@@ -10,10 +10,12 @@ class HeaderRow extends Component {
   }
 
   render() {
+    const { headers, collapsed, collapsible, rowIndex } = this.props;
+
     return (
       <thead>
-        <tr className="header-row">
-          {this.props.headers.map((header, index) => (
+        <tr className={collapsible ? `header-row comparator-row${rowIndex} ${collapsed ? "collapse" : ""}` : "header-row"}>
+          {headers.map((header, index) => (
             <Header label={header.label} 
                     description={header.description} 
                     key={index}/>
@@ -43,10 +45,19 @@ class HeaderRow extends Component {
   }
 }
 
+HeaderRow.defaultProps = {
+  isFirstOfMany: false,
+  collapsible: true,
+  collapsed: true
+}
+
 HeaderRow.propTypes = {
   headers: PropTypes.array,
   isFirstOfMany: PropTypes.bool,
-  language: PropTypes.string
+  language: PropTypes.string,
+  collapsible: PropTypes.bool,
+  collapsed: PropTypes.bool,
+  rowIndex: PropTypes.number
 }
 
 export default HeaderRow;

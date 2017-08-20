@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class MoreDetailsCell extends Component {
   render() {
-    const { index, language } = this.props;
+    const { rowIndex, language } = this.props;
 
     let lessDetails;
     let moreDetails;
@@ -21,8 +21,8 @@ class MoreDetailsCell extends Component {
                 className="tooltip-category more-details-btn"
                 aria-hidden="true"
                 data-toggle="collapse"
-                id={`togglebtn${index}`}
-                data-target={`.comparator-row${index}`}
+                id={`togglebtn${rowIndex}`}
+                data-target={`.comparator-row${rowIndex}`}
                 value={moreDetails}
                 data-more-details={moreDetails}
                 data-less-details={lessDetails}>
@@ -34,7 +34,7 @@ class MoreDetailsCell extends Component {
 }
 
 MoreDetailsCell.propTypes = {
-  index: PropTypes.number,
+  rowIndex: PropTypes.number,
   label: PropTypes.string
 }
 

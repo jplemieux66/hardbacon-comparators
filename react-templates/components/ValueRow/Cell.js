@@ -38,9 +38,10 @@ class Cell extends Component {
       return (
         <div>
           {
-            value.map((line, index) => (
-              <p key={index}>{line}</p>
-            ))
+            value.map((line, index) => ([
+              <p key={`p${index}`}>{line}</p>,
+              <br key={`br${index}`}></br>
+            ]))
           }
         </div>
       )

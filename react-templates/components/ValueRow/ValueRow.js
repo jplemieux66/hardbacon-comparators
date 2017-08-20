@@ -12,11 +12,11 @@ class ValueRow extends Component {
   }
 
   render() {
-    const { headerRow, entryObject, language } = this.props;
+    const { rowIndex, headerRow, entryObject, language, collapsible, collapsed } = this.props;
 
     return (
       <tbody>
-        <tr>
+        <tr className={collapsible ? `comparator-row${rowIndex} ${collapsed ? "collapse" : ""}` : ""}>
           {headerRow.map((header, index) => {
               if (header.valueName == "promotionalOffers" && entryObject["promotionalOffers"]) 
               {
@@ -40,20 +40,28 @@ class ValueRow extends Component {
   }
 
   generateMoreDetailsCell() {
-    const { index, language } = this.props;
+    const { rowIndex, language } = this.props;
 
     if (this.props.isFirstOfMany) {
-      return <MoreDetailsCell index={index} language={language} />
+      return <MoreDetailsCell rowIndex={rowIndex} language={language} />
     }
   }
  }
+
+ValueRow.defaultProps = {
+  isFirstOfMany: false,
+  collapsible: true,
+  collapsed: true
+}
 
 ValueRow.propTypes = {
   headerRow: PropTypes.array,
   entryObject: PropTypes.object,
   isFirstOfMany: PropTypes.bool,
-  index: PropTypes.number,
-  language: PropTypes.string
+  rowIndex: PropTypes.number,
+  language: PropTypes.string,
+  collapsible: PropTypes.bool,
+  collapsed: PropTypes.bool
 }
 
 export default ValueRow;

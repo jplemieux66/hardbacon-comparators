@@ -10,6 +10,8 @@ export default (body) => (`
     crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- ReCaptcha JS -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <!-- Custom JS -->
     <script src="assets/script.js"></script>
     <!-- Bootstrap CSS -->
