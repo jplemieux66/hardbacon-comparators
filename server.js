@@ -135,10 +135,10 @@ var urlBeforeEmail = "";
 app.post('/send-email', (req, res) => {
   var recaptcha = req.body["g-recaptcha-response"];
   if (recaptcha != "") {
-      email.sendEmail(req.body.email, req.body.name, req.body.offerName, req.body.language);
+      // email.sendEmail(req.body.email, req.body.name, req.body.offerName, req.body.language);
   }
   if (req.body.subscribe == "on") {
-      email.addSubscriber(req.body.email, req.body.name);
+      // email.addSubscriber(req.body.email, req.body.name);
   }
   res.end();
 });
