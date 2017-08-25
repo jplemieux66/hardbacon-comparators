@@ -31,12 +31,33 @@ $(document).ready(function() {
     var button = $(this);
     var offerText = button.attr("data-offer-text");
     var offerName = button.attr("data-offer-name");
+    var language = button.attr("data-language");
 
     $('.promotional-offer-text').text(offerText);
     $('#offer-name-input').attr('value', offerName);
+    $('#language-input').attr('value', language);
   };
   
   for (var i = 0; i < classname.length; i++) {
       classname[i].addEventListener('click', promotionalOffersFunction, false);
   }
+
+  $('#promotional-offer-form').submit(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+      url:'/send-email',
+      type:'post',
+      data:$('#promotional-offer-form').serialize(),
+      success: function() {
+        $('#success-alert').show();
+      }
+    });
+    
+    $("#close-promotional-offers-button").click();
+  });
+
+  $('.close').click(function() {
+    $('.alert').hide();
+  });
 });

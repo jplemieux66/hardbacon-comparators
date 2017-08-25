@@ -22,23 +22,27 @@ export default (body) => (`
     <title>Brokerages | Hardbacon</title>
   </head>
   <body>
+    <div id="success-alert" class="alert alert-success alert-fixed">
+      <a href="#" class="close" aria-label="close">&times;</a>
+      <strong>Success!</strong> The promotional offer was sent to your email. 
+    </div>
     <div id="root">${body}</div>
-
     <div id="promotional-offer-modal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button id="close-promotional-offers-button" type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Promotional Offer</h4>
           </div>
           <div class="modal-body">
-            <form class="form-group" action="/send-email" method="post">
+            <form id="promotional-offer-form" class="form-group">
               <p class="promotional-offer-text">
               We’ll send you an email right away with all the info you need to redeem the promotional offer from XXXXXXXXX. Before we do
                 that, we need you to give us your name and email address below.
               </p>
               <input type="hidden" name="offerName" id="offer-name-input">
+              <input type="hidden" name="language" id="language-input">
               <p>
                 <input type="text" name="name" class="promotional-offer-text-input form-control" required="required" placeholder="Name">
              </p>

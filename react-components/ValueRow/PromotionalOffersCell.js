@@ -10,7 +10,7 @@ class PromotionalOffersCell extends Component {
   }
 
   render () {
-    const { name, offerDescription } = this.props;
+    const { name, offerDescription, language } = this.props;
 
     return (
       <td>
@@ -18,8 +18,8 @@ class PromotionalOffersCell extends Component {
                 className="btn btn-info offer-btn"
                 data-toggle="modal"
                 data-target="#promotional-offer-modal"
+                data-language={language}
                 data-offer-name={name}
-
                 data-offer-text={this.generateOfferText()}>
           { offerDescription }
         </button>

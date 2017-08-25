@@ -4,3 +4,4 @@ local/
 firebase-config.js
 email.js
 build/
+generated-comparators/

@@ -1,6 +1,6 @@
 var rest = require('restler');
 
-export default rest.service(function(base_url,api_key,timeout) {
+var Mailin = rest.service(function(base_url,api_key,timeout) {
 	this.base_url = base_url;
 	this.api_key = api_key;
 	this.timeout = timeout;
@@ -771,7 +771,7 @@ export default rest.service(function(base_url,api_key,timeout) {
 		@options data {Array} headers: The headers will be sent along with the mail headers in original email. Example: array("Content-Type"=>"text/html; charset=iso-8859-1"). You can use commas to separate multiple headers [Optional]
 	*/
 	send_transactional_template:function(data) {
-		id = data['id'];
+		var id = data['id'];
 		delete data['id'];
 		return this.put_request("template/" + id,JSON.stringify(data));
 	},
@@ -861,3 +861,5 @@ export default rest.service(function(base_url,api_key,timeout) {
 		return this.delete_request("advanced/" + id,"");
 	}
 });
+
+module.exports = Mailin;

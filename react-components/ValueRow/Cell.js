@@ -36,14 +36,14 @@ class Cell extends Component {
       return <img src={value} />
     } else if (Array.isArray(value)) {
       return (
-        <div>
+        <p>
           {
             value.map((line, index) => ([
               line,
               <br key={index}></br>
             ]))
           }
-        </div>
+        </p>
       )
     } else if (value) {
       return <p>{value}</p>

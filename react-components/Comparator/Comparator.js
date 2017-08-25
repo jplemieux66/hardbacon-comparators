@@ -65,13 +65,14 @@ class Comparator extends Component {
       data.headers.map((headerRow, headerRowIndex) => ([
         <HeaderRow headers={headerRow} 
                    language={data.language} 
+                   isFirstOfMany={ data.headers.length > 1 && headerRowIndex == 0 }
                    key={`HeaderRow${entryIndex}-${headerRowIndex}`} 
-                   rowIndex={entryIndex} />,
+                   rowIndex={entryIndex + 1} />,
         <ValueRow headerRow={headerRow}
                   entryObject={entry}
                   isFirstOfMany={ data.headers.length > 1 && headerRowIndex == 0 }
                   key={`ValueRow${entryIndex}-${headerRowIndex}`}
-                  rowIndex={entryIndex}
+                  rowIndex={entryIndex + 1}
                   language={data.language}
                   collapsible={headerRowIndex != 0} />
       ]))

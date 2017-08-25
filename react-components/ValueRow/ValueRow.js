@@ -12,7 +12,7 @@ class ValueRow extends Component {
   }
 
   render() {
-    const { rowIndex, headerRow, entryObject, language, collapsible, collapsed } = this.props;
+    const { dataId, rowIndex, headerRow, entryObject, language, collapsible, collapsed } = this.props;
 
     return (
       <tbody>
@@ -56,6 +56,7 @@ ValueRow.defaultProps = {
 }
 
 ValueRow.propTypes = {
+  dataId: PropTypes.number,
   headerRow: PropTypes.array,
   entryObject: PropTypes.object,
   isFirstOfMany: PropTypes.bool,

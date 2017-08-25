@@ -1,0 +1,41 @@
+{
+  "Virtual Brokers": {
+    "en": 20,
+    "fr": 21
+  },
+  "Questrade": {
+    "en": 17,
+    "fr": 23
+  },
+  "BMO InvestorLine": {
+    "en": 88,
+    "fr": 87
+  },
+  "Jitneytrade": {
+    "en": 27,
+    "fr": 26
+  },
+  "BMO SmartFolio": {
+    "en": 85,
+    "fr": 86
+  },
+  "Wealthsimple": {
+    "en": 15,
+    "fr": 16
+  },
+  "Responsive": {
+    "en": 92
+  },
+  "Portfolio IQ": {
+    "en": 19,
+    "fr": 25
+  },
+  "Justwealth": {
+    "en": 11,
+    "fr": 25
+  },
+  "ModernAdvisor": {
+    "en": 33,
+    "fr": 32
+  }
+}

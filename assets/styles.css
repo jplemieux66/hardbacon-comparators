@@ -302,6 +302,10 @@ img {
 	white-space: normal;
 }
 
+.offer-btn {
+	margin: 0 auto;
+}
+
 #promotional-offer-modal .modal-body {
 	text-align: center;
 }
@@ -339,7 +343,15 @@ img {
 	margin: 0 auto;
 }
 
-#offer-name {
-	visibility: collapse;
-	position: absolute;
+.alert-fixed {
+	position:fixed; 
+	top: 0px; 
+	left: 0px; 
+	width: 100%;
+	z-index:9999; 
+	border-radius:0px
+}
+
+#success-alert {
+	display: none;
 }
