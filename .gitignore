@@ -3,4 +3,4 @@ local/
 .vscode/
 email/
 build/
-generated-comparators/
+generated-comparators/*.*
