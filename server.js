@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const fs = require('fs');
-const email = require('./email/email.js');
+// const email = require('./email/email.js');
 const firebaseConfig = require('./firebase-config.js');
 
 import React from 'react';
@@ -128,8 +128,6 @@ app.get('/generate-roboadvisors_fr', (req, res) => {
 app.get('/roboadvisors_fr', (req, res) => {
     res.sendFile(__dirname + "/generated-comparators/roboadvisors_fr.html")
 });
-
-var urlBeforeEmail = "";
 
 // Send Email Route
 app.post('/send-email', (req, res) => {
