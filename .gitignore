@@ -1,7 +1,6 @@
 node_modules/
 local/
 .vscode/
-firebase-config.js
 email/
 build/
 generated-comparators/
