@@ -23,9 +23,7 @@
     "firebase": "^4.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "restler": "^3.4.0"
-  },
-  "devDependencies": {
+    "restler": "^3.4.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

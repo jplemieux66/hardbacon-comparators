@@ -21,6 +21,10 @@ firebase.initializeApp(config);
 
 app.use('/assets', express.static(__dirname + '/assets'));
 
+app.get('/', (req, res) => {
+  res.send("Please append appropriate URL. ");
+});
+
 // BROKERAGES (ENGLISH)
 app.get('/generate-brokerages_en', (req, res) => {
   firebase
