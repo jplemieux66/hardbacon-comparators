@@ -1,0 +1,162 @@
+{
+  "brokerages_en": {
+    "headers": [[
+      {
+        "valueName": "imageUrl",
+        "label": "BROKERAGES",
+        "showLabelOnMobile": false
+      },
+      {
+        "valueName": "minimumDeposit",
+        "label": "MINIMUM DEPOSIT",
+        "description": "Amount required to open an account"
+      },
+      {
+        "valueName": "commissionEquity",
+        "label": "COMMISSION - EQUITY",
+        "description": "Fee charged on every executed buy or sell equity transaction. Some brokers have variable commissions depending on the number of shares traded. Commission is not charged if the order expires or is cancelled."
+      },
+      {
+        "valueName": "etfOffers",
+        "label": "ETF OFFERS",
+        "description": "Some brokers offer free purchases on all ETFs and only charge commissions on sell transactions. Others offer a limited selection of commission-free ETFs. If no offer is available, ETFs are commissionned as equity."
+      },
+      {
+        "valueName": "accountMaintenance",
+        "label": "ACCOUNT MAINTENANCE",
+        "description": "Administration fee to maintain an account. This is usually waived when certain asset levels or number of commissionable trades are met.",
+        "rowNumber": 0
+      },
+      {
+        "valueName": "promotionalOffers",
+        "label": "PROMOTIONAL OFFERS",
+        "description": "These offers, often available for a limited time, allow Hardbacon’s users to keep more bacon in their pockets. Every time a user redeem one of these offers using our links, we get a commission, which allow us to continue to work for you. ",
+        "showLabelOnMobile": false
+      }
+    ], [
+      {
+        "valueName": "roboAdvisor",
+        "label": "ROBO-ADVISOR",
+        "description": "Robo-advisors invest your money automatically based on your risk profile. Set it and forget it."
+      },
+      {
+        "valueName": "roboAdvisor",
+        "label": "ROBO-ADVISOR",
+        "description": "Robo-advisors invest your money automatically based on your risk profile. Set it and forget it."
+      },
+      {
+        "valueName": "optionsCommissions",
+        "label": "OPTIONS - COMMISSIONS",
+        "description": "Fee charged on every executed buy or sell options transaction which depends on the number of contracts. Commission is not charged if the order expires or is cancelled."
+      },
+      {
+        "valueName": "resources",
+        "label": "RESOURCES",
+        "description": "Premium tools offered at no additional costs to account holders. Most brokerages also offer in-house market research and quotes."
+      },
+      {
+        "valueName": "reducedCommissionsEquity",
+        "label": "REDUCED COMMISSIONS - EQUITY",
+        "description": "Lower fees are usually offered to active investors who trade a lot or subscribe to premium services."
+      },
+      {
+        "valueName": "internationalMarkets",
+        "label": "INTERNATIONAL MARKETS",
+        "description": "To invest in foreign companies not listed in North-American markets, most brokerages charge hefty commissions. International markets provide increased diversification and unique opportunities, but also expose investors to foreign exchange risk."
+      },
+      {
+        "valueName": "usdOnly",
+        "label": "USD ONLY",
+        "description": "USD denominated brokerage accounts allow you to trade in U.S. markets without converting to CAD. No bothersome exchange rate but requires at least one account per currency."
+      }
+    ], [
+      {
+        "valueName": "dualCurrencyCadUsd",
+        "label": "DUAL-CURRENCY (CAD/USD)",
+        "description": "Dual-currency accounts settle transactions in their base currencies (USD or CAD) without automatically converting them to CAD. Allows canadian and U.S. market transactions without bothersome exchange rates."
+      },
+      {
+        "valueName": "accountMaintenanceRebateCriteria",
+        "label": "ACCOUNT MAINTENANCE REBATE CRITERIA",
+        "description": "Requirements to meet in order to waive account maintenance fees. Required assets are based on the total of all accounts."
+      },
+      {
+        "valueName": "optionReducedCommissions",
+        "label": "OPTION - REDUCED COMMISSIONS",
+        "description": "Lower fees are usually offered to active investors who trade a lot or subscribe to premium services."
+      },
+      {
+        "valueName": "level12Data",
+        "label": "LEVEL 1 & 2 DATA",
+        "description": "Real-time data can give experienced traders important insight regarding market depth. Level 1 users get real-time quotes while level 2 offers details on all pending orders (bid/ask). Some brokers offer ",
+        "rowNumber": 2
+      },
+      {
+        "valueName": "marginAccountRate",
+        "label": "MARGIN ACCOUNT RATE",
+        "description": "Interest rates on outstanding margin balance: only the amount borrowed incurs interest. Higher margin balances usually offer better rates. "
+      },
+      {
+        "valueName": "mobile",
+        "label": "MOBILE",
+        "description": "Mobile application for iOS or Android. Website built for mobile on which you can place trades."
+      }
+    ]],
+    "entries": [
+      {
+        "id": "virtual_brokers",
+        "name": "Virtual Brokers",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/virtual_broker_logo.png",
+        "minimumDeposit": "$1000",
+        "commissionEquity": "$9.99",
+        "etfOffers": "Free to purchase",
+        "accountMaintenance": "$24.95/qtr",
+        "promotionalOffers": "Open an account and get your 1 month of free trades",
+        "roboAdvisor": "No",
+        "optionsCommissions": "$9.99 + 1.25/contract",
+        "resources": "none",
+        "reducedCommissionsEquity": "$4.99 (150+ trades/qtr) or Free (With subscription of $150+/month trading platform)",
+        "internationalMarkets": "No",
+        "usdOnly": "Registered (+15$/qtr)",
+        "dualCurrencyCadUsd": "Registered/Unregistered",
+        "accountMaintenanceRebateCriteria": [
+          "$5,000+ assets Under 26 years old",
+          "1+ trades in last 3 months",
+          "Maintenance fees from the last 3 months can be rolled over to cover commissions"
+        ],
+        "optionReducedCommissions": "$4.99 + $1.25/contract (150+ trades/qtr)",
+        "level12Data": "Level 1 & 2 - $150/month",
+        "marginAccountRate": "P + 1.5%",
+        "mobile": "iOS/Android Website"
+      },
+      {
+        "id": "questrade",
+        "name": "Questrade",
+        "imageUrl": "http://hardbaconmedia.hardbacon.ca/media/2016/08/questrade_logo.png",
+        "minimumDeposit": "$1000",
+        "commissionEquity": "$0.01/share (min. $4.95 - max. $9.95)",
+        "etfOffers": "Free to purchase",
+        "accountMaintenance": "$24.95/qtr",
+        "promotionalOffers": "Open an account and get 50$ in free trades",
+        "roboAdvisor": "Portfolio IQ",
+        "optionsCommissions": "$9.95 + $1/contract",
+        "resources": "Recognia",
+        "reducedCommissionsEquity": "$0.01/share (min. $0.01 - max. $6.95) (With subscription of $89.95+ data package)",
+        "internationalMarkets": "1% trade values Minimum: $195",
+        "usdOnly": "N/A",
+        "dualCurrencyCadUsd": "Registered/Unregistered",
+        "accountMaintenanceRebateCriteria": "$5,000+ assets",
+        "optionReducedCommissions": "$4.95 + $0.75/contract (With purchase of $89.95+ data package)",
+        "level12Data": [
+          "Level 1 - $19.95/month ",
+          "Level 2 - $89.95$/month"
+        ],
+        "marginAccountRate": [
+          "P + 3.5% < $100 000",
+          "P + 2.5% > $100 000"
+        ],
+        "mobile": "iOS/Android Website"
+      }
+    ]
+  }
+}
