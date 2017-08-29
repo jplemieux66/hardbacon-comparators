@@ -1,5 +1,5 @@
 var config = {
-  apiKey: "AIzaSyCwJOoJc-bTBsmCGQaX1349mLRe2xuAmlA",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "hardbacon-comparators-demo.firebaseapp.com",
   databaseURL: "https://hardbacon-comparators-demo.firebaseio.com",
   projectId: "hardbacon-comparators-demo",
@@ -7,10 +7,4 @@ var config = {
   messagingSenderId: "1531169764"
 };
 
-var getConfig = () => {
-  return config;
-}
-
-module.exports = {
-  getConfig
-}
+export default config;
