@@ -4,3 +4,4 @@ local/
 email/
 build/
 generated-comparators/*.html
+.env

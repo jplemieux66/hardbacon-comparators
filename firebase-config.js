@@ -1,5 +1,5 @@
 var config = {
-  apiKey: "AIzaSyCwJOoJc-bTBsmCGQaX1349mLRe2xuAmlA",
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: "hardbacon-comparators-demo.firebaseapp.com",
   databaseURL: "https://hardbacon-comparators-demo.firebaseio.com",
   projectId: "hardbacon-comparators-demo",

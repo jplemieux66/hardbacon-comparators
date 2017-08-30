@@ -2,13 +2,15 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const fs = require('fs');
 // const email = require('./email/email.js');
-const firebaseConfig = require('./firebase-config.js');
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import firebase from 'firebase';
+import firebaseConfig from './firebase-config.js';
 import Comparator from './react-components/Comparator/Comparator';
 import template from './template.js';
+
+require('dotenv').config();
 
 var app = express();
 const port = process.env.PORT || 3003;
@@ -16,8 +18,7 @@ const port = process.env.PORT || 3003;
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({limit: '5mb', extended: true}));
 
-var config = firebaseConfig.getConfig();
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 app.use('/assets', express.static(__dirname + '/assets'));
 
