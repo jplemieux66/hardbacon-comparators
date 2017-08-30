@@ -30,18 +30,11 @@ class HeaderRow extends Component {
 
   generateMoreDetailsHeader() {
     const { isFirstOfMany, language } = this.props;
-    
-    if (isFirstOfMany) {
-      let label;
 
-      if (language == "fr") {
-        label = "PLUS DE DÉTAILS"
-      } else {
-        label = "MORE DETAILS"
-      }
+    if (!this.props.isFirstOfMany) 
+      return;
 
-      return <Header label={label} />
-    }
+    return <Header label={ language === 'fr' ? "PLUS DE DÉTAILS" : "MORE DETAILS" } />
   }
 }
 
