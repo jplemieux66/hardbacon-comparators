@@ -7,10 +7,4 @@ var config = {
   messagingSenderId: "1531169764"
 };
 
-var getConfig = () => {
-  return config;
-}
-
-module.exports = {
-  getConfig
-}
+export default config;
